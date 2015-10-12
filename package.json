@@ -1,5 +1,5 @@
 {
-  "name": "istanbul",
+  "name": "@sealights/sl-node-cover",
   "version": "0.3.22",
   "description": "Yet another JS code coverage tool that computes statement, line, function and branch coverage with module loader hooks to transparently add coverage when running tests. Supports all JS coverage use cases including unit tests, server side functional tests and browser tests. Built for scale",
   "keywords": [
@@ -11,6 +11,7 @@
   "author": "Krishnan Anantheswaran <kananthmail-github@yahoo.com>",
   "license": "BSD-3-Clause",
   "contributors": [
+    "Alon Weiss <alonw@sealights.io>",
     "Reid Burke <me@reidburke.com>",
     "Martin Cooper <mfncooper@gmail.com>",
     "Dav Glass <davglass@gmail.com>",
