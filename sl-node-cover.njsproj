@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{cca8411c-297c-42ed-a110-c0653a343263}</ProjectGuid>
+    <ProjectHome />
+    <ProjectView>ShowAllFiles</ProjectView>
+    <StartupFile>lib\cli.js</StartupFile>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ScriptArguments>instrument test\alon.js</ScriptArguments>
+    <StartWebBrowser>True</StartWebBrowser>
+    <NodeExeArguments>
+    </NodeExeArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Content Include="package.json" />
+    <Content Include="yuidoc.json" />
+    <Content Include="CHANGELOG.md" />
+    <Content Include="coverage.json.md" />
+    <Content Include="ignoring-code-for-coverage.md" />
+    <Content Include="README.md" />
+    <Content Include="yui-coverage-comparison.md" />
+    <Compile Include="index.js" />
+    <Compile Include="lib\cli.js" />
+    <Compile Include="lib\collector.js" />
+    <Compile Include="lib\config.js" />
+    <Compile Include="lib\file-signature.js" />
+    <Compile Include="lib\hook.js" />
+    <Compile Include="lib\instrumenter.js" />
+    <Compile Include="lib\object-utils.js" />
+    <Compile Include="lib\register-plugins.js" />
+    <Compile Include="lib\reporter.js" />
+    <Compile Include="test\cli-helper.js" />
+    <Compile Include="test\common.js" />
+    <Compile Include="test\es6.js" />
+    <Compile Include="test\helper.js" />
+    <Compile Include="test\loader.js" />
+    <Compile Include="test\run-again.js" />
+    <Compile Include="test\run.js" />
+    <Content Include="lib\assets\base.css" />
+    <Content Include="lib\assets\sort-arrow-sprite.png" />
+    <Compile Include="lib\assets\sorter.js" />
+    <Compile Include="lib\command\check-coverage.js" />
+    <Compile Include="lib\command\cover.js" />
+    <Compile Include="lib\command\help.js" />
+    <Compile Include="lib\command\index.js" />
+    <Compile Include="lib\command\instrument.js" />
+    <Compile Include="lib\command\report.js" />
+    <Compile Include="lib\command\test.js" />
+    <Compile Include="lib\report\clover.js" />
+    <Compile Include="lib\report\cobertura.js" />
+    <Compile Include="lib\report\html.js" />
+    <Compile Include="lib\report\index.js" />
+    <Compile Include="lib\report\json-summary.js" />
+    <Compile Include="lib\report\json.js" />
+    <Compile Include="lib\report\lcov.js" />
+    <Compile Include="lib\report\lcovonly.js" />
+    <Compile Include="lib\report\none.js" />
+    <Compile Include="lib\report\teamcity.js" />
+    <Compile Include="lib\report\text-lcov.js" />
+    <Compile Include="lib\report\text-summary.js" />
+    <Compile Include="lib\report\text.js" />
+    <Compile Include="lib\store\fslookup.js" />
+    <Compile Include="lib\store\index.js" />
+    <Compile Include="lib\store\memory.js" />
+    <Compile Include="lib\store\tmp.js" />
+    <Compile Include="lib\util\factory.js" />
+    <Compile Include="lib\util\file-matcher.js" />
+    <Compile Include="lib\util\file-writer.js" />
+    <Compile Include="lib\util\help-formatter.js" />
+    <Compile Include="lib\util\input-error.js" />
+    <Compile Include="lib\util\insertion-text.js" />
+    <Compile Include="lib\util\meta.js" />
+    <Compile Include="lib\util\tree-summarizer.js" />
+    <Compile Include="lib\util\writer.js" />
+    <Compile Include="lib\util\yui-load-hook.js" />
+    <Content Include="lib\assets\vendor\prettify.css" />
+    <Compile Include="lib\assets\vendor\prettify.js" />
+    <Compile Include="lib\command\common\run-with-cover.js" />
+    <Compile Include="lib\report\common\defaults.js" />
+    <Content Include="lib\report\templates\foot.txt" />
+    <Content Include="lib\report\templates\head.txt" />
+    <Compile Include="misc\ast\assign.js" />
+    <Compile Include="misc\ast\block-label.js" />
+    <Compile Include="misc\ast\cond.js" />
+    <Compile Include="misc\ast\defun-compact.js" />
+    <Compile Include="misc\ast\defun.js" />
+    <Compile Include="misc\ast\do-statement.js" />
+    <Compile Include="misc\ast\dot.js" />
+    <Compile Include="misc\ast\eq.js" />
+    <Compile Include="misc\ast\expr.js" />
+    <Compile Include="misc\ast\for-block.js" />
+    <Compile Include="misc\ast\for-compact.js" />
+    <Compile Include="misc\ast\for-multi.js" />
+    <Compile Include="misc\ast\for-statement.js" />
+    <Compile Include="misc\ast\forin-block.js" />
+    <Compile Include="misc\ast\forin-compact.js" />
+    <Compile Include="misc\ast\forin-statement.js" />
+    <Compile Include="misc\ast\func.js" />
+    <Compile Include="misc\ast\if-block.js" />
+    <Compile Include="misc\ast\if-compact.js" />
+    <Compile Include="misc\ast\if-only.js" />
+    <Compile Include="misc\ast\if-statement.js" />
+    <Compile Include="misc\ast\incr-slice.js" />
+    <Compile Include="misc\ast\label.js" />
+    <Compile Include="misc\ast\nested-if.js" />
+    <Compile Include="misc\ast\pfcall.js" />
+    <Compile Include="misc\ast\preamble.js" />
+    <Compile Include="misc\ast\switch-statement.js" />
+    <Compile Include="misc\ast\try-block.js" />
+    <Compile Include="misc\ast\try-statement.js" />
+    <Compile Include="misc\ast\while-block.js" />
+    <Compile Include="misc\ast\while-compact.js" />
+    <Compile Include="misc\ast\while-for.js" />
+    <Compile Include="misc\ast\while-statement.js" />
+    <Content Include="misc\config\istanbul-config-alt.json" />
+    <Content Include="misc\config\istanbul-config.json" />
+    <Compile Include="misc\samples\coverage.js" />
+    <Compile Include="test\browser\test-browser-instrumentation.js" />
+    <Content Include="test\cli\package.json" />
+    <Compile Include="test\cli\test-base-cli.js" />
+    <Compile Include="test\cli\test-check-coverage-command.js" />
+    <Compile Include="test\cli\test-clover-report.js" />
+    <Compile Include="test\cli\test-cobertura-report.js" />
+    <Compile Include="test\cli\test-cover-command.js" />
+    <Compile Include="test\cli\test-html-report.js" />
+    <Compile Include="test\cli\test-include-pid.js" />
+    <Compile Include="test\cli\test-instrument-command.js" />
+    <Compile Include="test\cli\test-json-report.js" />
+    <Compile Include="test\cli\test-json-summary-report.js" />
+    <Compile Include="test\cli\test-lcov-report.js" />
+    <Compile Include="test\cli\test-lcovonly-report.js" />
+    <Compile Include="test\cli\test-lots-of-files.js" />
+    <Compile Include="test\cli\test-none-report.js" />
+    <Compile Include="test\cli\test-report-command.js" />
+    <Compile Include="test\cli\test-teamcity-report.js" />
+    <Compile Include="test\cli\test-test-command.js" />
+    <Compile Include="test\cli\test-text-lcov-report.js" />
+    <Compile Include="test\instrumentation\test-do.js" />
+    <Compile Include="test\instrumentation\test-es6-arrow-fn.js" />
+    <Compile Include="test\instrumentation\test-es6-forof.js" />
+    <Compile Include="test\instrumentation\test-es6-super.js" />
+    <Compile Include="test\instrumentation\test-es6-yield.js" />
+    <Compile Include="test\instrumentation\test-expressions.js" />
+    <Compile Include="test\instrumentation\test-for.js" />
+    <Compile Include="test\instrumentation\test-forin.js" />
+    <Compile Include="test\instrumentation\test-functions.js" />
+    <Compile Include="test\instrumentation\test-if-with-hints.js" />
+    <Compile Include="test\instrumentation\test-if.js" />
+    <Compile Include="test\instrumentation\test-locations.js" />
+    <Compile Include="test\instrumentation\test-misc.js" />
+    <Compile Include="test\instrumentation\test-statement-with-hints.js" />
+    <Compile Include="test\instrumentation\test-statement.js" />
+    <Compile Include="test\instrumentation\test-strict.js" />
+    <Compile Include="test\instrumentation\test-switch.js" />
+    <Compile Include="test\instrumentation\test-try.js" />
+    <Compile Include="test\instrumentation\test-while.js" />
+    <Compile Include="test\instrumentation\test-with.js" />
+    <Compile Include="test\other\test-collector.js" />
+    <Compile Include="test\other\test-command-xface.js" />
+    <Compile Include="test\other\test-config.js" />
+    <Compile Include="test\other\test-file-writer.js" />
+    <Compile Include="test\other\test-help-formatter.js" />
+    <Compile Include="test\other\test-hook.js" />
+    <Compile Include="test\other\test-index-xface.js" />
+    <Compile Include="test\other\test-input-error.js" />
+    <Compile Include="test\other\test-insertion-text.js" />
+    <Compile Include="test\other\test-matcher.js" />
+    <Compile Include="test\other\test-object-utils.js" />
+    <Compile Include="test\other\test-store.js" />
+    <Compile Include="test\other\test-summarizer.js" />
+    <Content Include="test\browser\support\index.html" />
+    <Compile Include="test\browser\support\phantom-test.client.js" />
+    <Compile Include="test\browser\support\server.js" />
+    <Compile Include="test\browser\support\vendor\yui-support.js" />
+    <Compile Include="test\cli\sample-project\amd\ipsum.js" />
+    <Compile Include="test\cli\sample-project\amd\lorem.js" />
+    <Compile Include="test\cli\sample-project\includeAllSources\unloadedFile.js" />
+    <Compile Include="test\cli\sample-project\includeAllSources\unloadedFileWithFunctionDeclaration.js" />
+    <Compile Include="test\cli\sample-project\lib\bar.js" />
+    <Compile Include="test\cli\sample-project\lib\foo.js" />
+    <Compile Include="test\cli\sample-project\test\amd-run.js" />
+    <Compile Include="test\cli\sample-project\test\global-leak.js" />
+    <Compile Include="test\cli\sample-project\test\run.js" />
+    <Compile Include="test\cli\sample-project\vendor\dummy_vendor_lib.js" />
+    <Compile Include="test\cli\sample-project\lib\util\bad.js" />
+    <Compile Include="test\cli\sample-project\lib\util\generate-names.js" />
+    <Compile Include="test\cli\sample-project\lib\util\unused.js" />
+    <Content Include="test\other\config-data\cfg.json" />
+    <Compile Include="test\other\data\baz.js" />
+    <Compile Include="test\other\data\foo.js" />
+    <Content Include="test\other\data-complete-copy\fixture.xml" />
+    <Compile Include="test\other\data-complete-copy\baz.js" />
+    <Compile Include="test\other\data-complete-copy\foo.js" />
+    <Compile Include="test\other\data\matcher\top.js" />
+    <Compile Include="test\other\data\matcher\general\general.js" />
+    <Compile Include="test\other\data\matcher\lib\lib-top.js" />
+    <Compile Include="test\other\data\matcher\node_modules\mod-file.js" />
+    <Compile Include="test\other\data\matcher\general\node_modules\mod-file.js" />
+    <Content Include="test\other\data-complete-copy\subdir\x.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="lib" />
+    <Folder Include="lib\assets" />
+    <Folder Include="lib\assets\vendor" />
+    <Folder Include="lib\command" />
+    <Folder Include="lib\command\common" />
+    <Folder Include="lib\report" />
+    <Folder Include="lib\report\common" />
+    <Folder Include="lib\report\templates" />
+    <Folder Include="lib\store" />
+    <Folder Include="lib\util" />
+    <Folder Include="misc" />
+    <Folder Include="misc\ast" />
+    <Folder Include="misc\config" />
+    <Folder Include="misc\samples" />
+    <Folder Include="test" />
+    <Folder Include="test\browser" />
+    <Folder Include="test\browser\support" />
+    <Folder Include="test\browser\support\vendor" />
+    <Folder Include="test\cli" />
+    <Folder Include="test\cli\sample-project" />
+    <Folder Include="test\cli\sample-project\amd" />
+    <Folder Include="test\cli\sample-project\includeAllSources" />
+    <Folder Include="test\cli\sample-project\lib" />
+    <Folder Include="test\cli\sample-project\lib\util" />
+    <Folder Include="test\cli\sample-project\node_modules" />
+    <Folder Include="test\cli\sample-project\node_modules\dependency" />
+    <Folder Include="test\cli\sample-project\node_modules\post-require" />
+    <Folder Include="test\cli\sample-project\test" />
+    <Folder Include="test\cli\sample-project\vendor" />
+    <Folder Include="test\instrumentation" />
+    <Folder Include="test\other" />
+    <Folder Include="test\other\config-data" />
+    <Folder Include="test\other\data" />
+    <Folder Include="test\other\data\matcher" />
+    <Folder Include="test\other\data\matcher\general" />
+    <Folder Include="test\other\data\matcher\general\node_modules" />
+    <Folder Include="test\other\data\matcher\lib" />
+    <Folder Include="test\other\data\matcher\node_modules" />
+    <Folder Include="test\other\data\matcher\node_modules\dep" />
+    <Folder Include="test\other\data-complete-copy" />
+    <Folder Include="test\other\data-complete-copy\subdir" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
