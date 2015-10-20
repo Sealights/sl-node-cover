@@ -16,6 +16,7 @@ module.exports = {
         "should report locations correctly": function (test) {
             verifier.verify(test, [], 'bar', { lines: { '1': 1 }, branches: { 1: [ 1, 0 ] }, functions: { 1: 1 }, statements: { '1': 1, '2': 1, '3': 1, '4': 0, '5': 1 }});
             var cov = verifier.getFileCoverage();
+            delete cov["1"].hash;
             test.deepEqual({
                 "1": {
                     "name": "foo",
