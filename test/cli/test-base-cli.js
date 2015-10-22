@@ -9,14 +9,14 @@ module.exports = {
     "should provide helpful errors when nothing passed": function (test) {
         helper.runCommand(null, [], function (results) {
             test.ok(!results.succeeded());
-            test.ok(results.grepError(/Try "istanbul help" for usage/));
+            test.ok(results.grepError(/Try "sl-node-cover help" for usage/));
             test.done();
         });
     },
     "should provide helpful errors when only flags passed in": function (test) {
         helper.runCommand(null, [ '-v', '-x' ], function (results) {
             test.ok(!results.succeeded());
-            test.ok(results.grepError(/Try "istanbul help" for usage/));
+            test.ok(results.grepError(/Try "sl-node-cover help" for usage/));
             test.done();
         });
     },
@@ -24,14 +24,14 @@ module.exports = {
         helper.runCommand('instrumentation', [ '--root', 'a/nonexistent/path' ], function (results) {
             test.ok(!results.succeeded());
             test.ok(results.grepError(/Invalid command \[instrumentation\], allowed values/));
-            test.ok(results.grepError(/Try "istanbul help" for usage/));
+            test.ok(results.grepError(/Try "sl-node-cover help" for usage/));
             test.done();
         });
     },
     "should print a stack trace on uncaught exception": function (test) {
         helper.runCommand('instrument', [ '--root', 'a/nonexistent/path' ], function (results) {
             test.ok(!results.succeeded());
-            test.ok(!results.grepError(/Try "istanbul help" for usage/));
+            test.ok(!results.grepError(/Try "sl-node-cover help" for usage/));
             test.ok(results.grepError(/ENOENT/));
             test.done();
         });
