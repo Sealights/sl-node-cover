@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{cca8411c-297c-42ed-a110-c0653a343263}</ProjectGuid>
     <ProjectHome />
-    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectView>ProjectFiles</ProjectView>
     <StartupFile>lib\cli.js</StartupFile>
     <WorkingDirectory>c:\Projects\SeaLights\Demoapp</WorkingDirectory>
     <OutputPath>.</OutputPath>
