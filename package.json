@@ -98,7 +98,7 @@
     "abbrev": "1.0.x",
     "ast-traverse": "^0.1.1",
     "async": "1.x",
-    "escodegen": "1.7.x",
+    "escodegen": "https://github.com/estools/escodegen.git#719de3033c4a9a0df27f698c47b48d2af7241835",
     "esprima": "2.5.x",
     "esprima-ast-utils": "0.0.6",
     "fileset": "0.2.x",
