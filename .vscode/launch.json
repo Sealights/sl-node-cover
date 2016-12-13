@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch",
+            "name": "Launch unit tests",
             "type": "node",
             "request": "launch",
             "program": "${workspaceRoot}/lib/cli.js",
@@ -17,6 +17,34 @@
                 // "sl-node-mocha"
             ],
             "cwd": "c:/projects/thid-party-repos/node-red-new/node-red",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "externalConsole": false,
+            "sourceMaps": false,
+            "outDir": null
+        },
+        {
+            "name": "Perform static instrumentation",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/lib/cli.js",
+            "stopOnEntry": false,
+            "args": [
+                //"help",
+                "instrument",
+                "c:/projects/sealights/SL.Cloud.UI/dist",
+                "-o",
+                "c:/projects/sealights/SL.Cloud.UI/dist-instrumented",
+                "--variable",
+                "$SL_COV"
+            ],
+            "cwd": "c:/projects/sealights/SL.Cloud.UI/dist",
             "preLaunchTask": null,
             "runtimeExecutable": null,
             "runtimeArgs": [
