@@ -1,2 +1,3 @@
 #!/usr/bin/env node
+process.env.IS_SL_NODE_COVER_CLI = "1"
 require('./cli.js');
